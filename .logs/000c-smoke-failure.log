@@ -1,0 +1,70 @@
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	﻿2026-04-08T15:55:59.7765590Z ##[group]Run patrickedqvist/wait-for-vercel-preview@v1.3.2
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T15:55:59.7766078Z with:
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T15:55:59.7766770Z   token: ***
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T15:55:59.7767014Z   max_timeout: 600
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T15:55:59.7767270Z   check_interval: 10
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T15:55:59.7767521Z   path: /
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T15:55:59.7767746Z ##[endgroup]
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T15:56:00.5771980Z target url » https://blueprint-sequel-c34b8tne8-nacirizak-7822s-projects.vercel.app
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T15:56:00.5779639Z Waiting for a status code 200 from: https://blueprint-sequel-c34b8tne8-nacirizak-7822s-projects.vercel.app
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T15:56:00.8262650Z GET status: 401. Attempt 0 of 60
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T15:56:10.9111647Z GET status: 401. Attempt 1 of 60
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T15:56:21.0169420Z GET status: 401. Attempt 2 of 60
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T15:56:31.0905983Z GET status: 401. Attempt 3 of 60
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T15:56:41.1957458Z GET status: 401. Attempt 4 of 60
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T15:56:51.3413058Z GET status: 401. Attempt 5 of 60
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T15:57:01.3961908Z GET status: 401. Attempt 6 of 60
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T15:57:11.4384079Z GET status: 401. Attempt 7 of 60
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T15:57:21.4919914Z GET status: 401. Attempt 8 of 60
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T15:57:31.5149648Z GET status: 401. Attempt 9 of 60
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T15:57:41.5427428Z GET status: 401. Attempt 10 of 60
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T15:57:51.5985011Z GET status: 401. Attempt 11 of 60
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T15:58:01.6269668Z GET status: 401. Attempt 12 of 60
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T15:58:11.7263677Z GET status: 401. Attempt 13 of 60
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T15:58:21.8130310Z GET status: 401. Attempt 14 of 60
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T15:58:31.8708714Z GET status: 401. Attempt 15 of 60
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T15:58:41.9243913Z GET status: 401. Attempt 16 of 60
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T15:58:51.9578498Z GET status: 401. Attempt 17 of 60
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T15:59:02.0313771Z GET status: 401. Attempt 18 of 60
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T15:59:12.0657490Z GET status: 401. Attempt 19 of 60
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T15:59:22.0986712Z GET status: 401. Attempt 20 of 60
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T15:59:32.1429688Z GET status: 401. Attempt 21 of 60
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T15:59:42.1811749Z GET status: 401. Attempt 22 of 60
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T15:59:52.2720146Z GET status: 401. Attempt 23 of 60
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T16:00:02.3325022Z GET status: 401. Attempt 24 of 60
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T16:00:12.3621159Z GET status: 401. Attempt 25 of 60
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T16:00:22.4004327Z GET status: 401. Attempt 26 of 60
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T16:00:32.4523441Z GET status: 401. Attempt 27 of 60
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T16:00:42.4815223Z GET status: 401. Attempt 28 of 60
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T16:00:52.5431626Z GET status: 401. Attempt 29 of 60
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T16:01:02.5802361Z GET status: 401. Attempt 30 of 60
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T16:01:12.6839264Z GET status: 401. Attempt 31 of 60
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T16:01:22.7127052Z GET status: 401. Attempt 32 of 60
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T16:01:32.7369550Z GET status: 401. Attempt 33 of 60
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T16:01:42.8221992Z GET status: 401. Attempt 34 of 60
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T16:01:52.9130229Z GET status: 401. Attempt 35 of 60
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T16:02:02.9586016Z GET status: 401. Attempt 36 of 60
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T16:02:12.9911741Z GET status: 401. Attempt 37 of 60
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T16:02:23.0465850Z GET status: 401. Attempt 38 of 60
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T16:02:33.0981869Z GET status: 401. Attempt 39 of 60
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T16:02:43.1278461Z GET status: 401. Attempt 40 of 60
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T16:02:53.1582488Z GET status: 401. Attempt 41 of 60
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T16:03:03.1941331Z GET status: 401. Attempt 42 of 60
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T16:03:13.2153350Z GET status: 401. Attempt 43 of 60
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T16:03:23.2500682Z GET status: 401. Attempt 44 of 60
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T16:03:33.3353259Z GET status: 401. Attempt 45 of 60
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T16:03:43.3575115Z GET status: 401. Attempt 46 of 60
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T16:03:53.4145424Z GET status: 401. Attempt 47 of 60
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T16:04:03.4763669Z GET status: 401. Attempt 48 of 60
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T16:04:13.5327173Z GET status: 401. Attempt 49 of 60
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T16:04:23.5624841Z GET status: 401. Attempt 50 of 60
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T16:04:33.5886976Z GET status: 401. Attempt 51 of 60
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T16:04:43.6167732Z GET status: 401. Attempt 52 of 60
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T16:04:53.6410467Z GET status: 401. Attempt 53 of 60
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T16:05:03.6703509Z GET status: 401. Attempt 54 of 60
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T16:05:13.7266958Z GET status: 401. Attempt 55 of 60
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T16:05:23.8300764Z GET status: 401. Attempt 56 of 60
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T16:05:33.8808399Z GET status: 401. Attempt 57 of 60
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T16:05:43.9366330Z GET status: 401. Attempt 58 of 60
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T16:05:54.0361877Z GET status: 401. Attempt 59 of 60
+Script 10 — post-deploy smoke (Vercel preview)	Wait for Vercel preview	2026-04-08T16:06:04.0446193Z ##[error]Timeout reached: Unable to connect to https://blueprint-sequel-c34b8tne8-nacirizak-7822s-projects.vercel.app

@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+# Pre-commit: fast gates only (staged files + type/forbidden scans)
+npx lint-staged
+npm run typecheck
+bash scripts/check-forbidden-terms.sh

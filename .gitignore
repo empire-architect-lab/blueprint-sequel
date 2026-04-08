@@ -1,0 +1,42 @@
+# build output
+dist/
+# generated types
+.astro/
+
+# dependencies
+node_modules/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+# NB: .logs/ IS tracked — task bookkeeping per CLAUDE.md commits .logs/<task-id>.log
+
+# environment variables
+.env
+.env.*
+!.env.example
+
+# Sentry (local-only auth token, NEVER commit)
+.env.sentry
+.sentryclirc
+
+# macOS-specific files
+.DS_Store
+
+# jetbrains setting folder
+.idea/
+
+# test output
+coverage/
+playwright-report/
+test-results/
+.playwright/
+
+# smoke test screenshots
+.smoke/
+!.smoke/.gitkeep
+
+# Vercel
+.vercel/

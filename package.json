@@ -1,0 +1,56 @@
+{
+  "name": "blueprint-sequel",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview --host 127.0.0.1 --port 4321",
+    "astro": "astro",
+    "typecheck": "astro check",
+    "lint": "eslint . && prettier --check .",
+    "lint:fix": "eslint . --fix && prettier --write .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "test:e2e:install": "playwright install --with-deps chromium",
+    "audit:deps": "npm audit --audit-level=high",
+    "check:rls": "bash scripts/check-rls.sh",
+    "check:tenant-id": "bash scripts/check-tenant-id.sh",
+    "check:forbidden": "bash scripts/check-forbidden-terms.sh",
+    "smoke": "node scripts/post-deploy-smoke.mjs",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,mts,cts,js,mjs,cjs,astro}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,yml,yaml,css}": [
+      "prettier --write"
+    ]
+  },
+  "dependencies": {
+    "astro": "^6.1.5"
+  },
+  "devDependencies": {
+    "@astrojs/check": "0.9.8",
+    "@playwright/test": "1.59.1",
+    "@sentry/astro": "10.47.0",
+    "@typescript-eslint/eslint-plugin": "8.58.1",
+    "@typescript-eslint/parser": "8.58.1",
+    "astro-eslint-parser": "1.4.0",
+    "eslint": "10.2.0",
+    "eslint-plugin-astro": "1.7.0",
+    "husky": "9.1.7",
+    "lint-staged": "16.4.0",
+    "prettier": "3.8.1",
+    "prettier-plugin-astro": "0.14.1",
+    "typescript": "5.9.3",
+    "vitest": "4.1.3"
+  }
+}

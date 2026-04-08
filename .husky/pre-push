@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+# Pre-push: full quality gate. Scripts 1-4 + 6-9.
+# Scripts 5 (gitleaks) and 10 (post-deploy smoke) are CI-only.
+npm run typecheck
+npm run lint
+npm run test
+npm run test:e2e
+npm run audit:deps
+npm run check:rls
+npm run check:tenant-id
+npm run check:forbidden
