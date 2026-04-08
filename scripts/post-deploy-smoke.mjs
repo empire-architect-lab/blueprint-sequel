@@ -45,8 +45,23 @@ const screenshotPath = resolve(smokeDir, `${sha}.png`);
 const consoleErrors = [];
 const pageErrors = [];
 
+const bypassSecret = process.env['VERCEL_AUTOMATION_BYPASS_SECRET'];
+if (!bypassSecret) {
+  console.error(
+    '[post-deploy-smoke] FAIL: VERCEL_AUTOMATION_BYPASS_SECRET is not set. ' +
+      'Vercel previews are gated by Deployment Protection and the smoke browser ' +
+      'cannot reach the page without the bypass header. Set the secret in CI env.',
+  );
+  process.exit(2);
+}
+
 const browser = await chromium.launch();
-const context = await browser.newContext();
+const context = await browser.newContext({
+  extraHTTPHeaders: {
+    'x-vercel-protection-bypass': bypassSecret,
+    'x-vercel-set-bypass-cookie': 'true',
+  },
+});
 const page = await context.newPage();
 
 page.on('console', (msg) => {
@@ -73,6 +88,9 @@ if (!response || !response.ok()) {
 
 const bodyTextLength = await page.evaluate(() => document.body.innerText.length);
 await page.screenshot({ path: screenshotPath, fullPage: true });
+const logsDir = resolve(__dirname, '..', '.logs');
+mkdirSync(logsDir, { recursive: true });
+await page.screenshot({ path: resolve(logsDir, '000d-smoke.png'), fullPage: true });
 
 await browser.close();
 

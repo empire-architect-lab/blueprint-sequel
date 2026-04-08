@@ -94,8 +94,14 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           max_timeout: 600
           check_interval: 10
+          # Vercel Deployment Protection gates previews with HTTP 401. The bypass
+          # secret is appended as query params so the action's readiness probe is
+          # accepted; the actual smoke browser uses the header form below.
+          path: /?x-vercel-protection-bypass=${{ secrets.VERCEL_AUTOMATION_BYPASS_SECRET }}&x-vercel-set-bypass-cookie=true
 
       - name: Run post-deploy smoke (script 10)
+        env:
+          VERCEL_AUTOMATION_BYPASS_SECRET: ${{ secrets.VERCEL_AUTOMATION_BYPASS_SECRET }}
         run: node scripts/post-deploy-smoke.mjs "${{ steps.vercel.outputs.url }}"
 
       - name: Upload smoke screenshot
