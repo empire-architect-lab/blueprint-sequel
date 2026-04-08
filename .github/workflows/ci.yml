@@ -1,0 +1,107 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  quality:
+    name: Quality gate (scripts 1-9)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
+
+      # Script 1 — astro check (tsc --noEmit for .astro + .ts)
+      - name: Typecheck
+        run: npm run typecheck
+
+      # Script 2 — eslint + prettier
+      - name: Lint
+        run: npm run lint
+
+      # Script 3 — vitest
+      - name: Unit tests
+        run: npm run test
+
+      # Script 4 — playwright (built preview, not dev)
+      - name: E2E tests
+        run: npm run test:e2e
+
+      # Script 5 — gitleaks (secret scan)
+      - name: Gitleaks
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # Script 6 — npm audit
+      - name: Audit deps
+        run: npm run audit:deps
+
+      # Script 7 — RLS check (stub for rep 1)
+      - name: Check RLS
+        run: npm run check:rls
+
+      # Script 8 — tenant-id check (stub for rep 1)
+      - name: Check tenant-id
+        run: npm run check:tenant-id
+
+      # Script 9 — forbidden terms
+      - name: Check forbidden terms
+        run: npm run check:forbidden
+
+  post-deploy-smoke:
+    name: Script 10 — post-deploy smoke (Vercel preview)
+    runs-on: ubuntu-latest
+    needs: quality
+    if: github.event_name == 'pull_request'
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Install Playwright chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Wait for Vercel preview
+        id: vercel
+        uses: patrickedqvist/wait-for-vercel-preview@v1.3.2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          max_timeout: 600
+          check_interval: 10
+
+      - name: Run post-deploy smoke (script 10)
+        run: node scripts/post-deploy-smoke.mjs "${{ steps.vercel.outputs.url }}"
+
+      - name: Upload smoke screenshot
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: post-deploy-smoke-${{ github.sha }}
+          path: .smoke/
+          if-no-files-found: warn
